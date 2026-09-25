@@ -63,11 +63,12 @@ const tile = (ico, bg, num) => page(600, 400, `
     </div>
   </div>`);
 
-const quote = page(600, 400, `
-  <div style="width:600px;height:400px;border-radius:28px;background:${C.sageDeep};display:flex;flex-direction:column;justify-content:center;padding:0 56px">
-    <div style="font:400 90px/0.6 ${SERIF};color:${C.sageMid}">“</div>
-    <div style="font:italic 400 34px/1.35 ${SERIF};color:${C.cream};margin-top:10px">Small steps every day add up to a thriving business.</div>
-    <div style="font:600 13px/1 ${SANS};letter-spacing:.35em;color:${C.sageMid};margin-top:28px">DAILY REMINDER</div>
+// 600x346 so the card's bottom edge lines up with the dashboard calendar.
+const quote = page(600, 346, `
+  <div style="width:600px;height:346px;border-radius:28px;background:${C.sageDeep};display:flex;flex-direction:column;justify-content:center;padding:0 56px">
+    <div style="font:400 84px/0.6 ${SERIF};color:${C.sageMid}">“</div>
+    <div style="font:italic 400 33px/1.35 ${SERIF};color:${C.cream};margin-top:8px">Small steps every day add up to a thriving business.</div>
+    <div style="font:600 13px/1 ${SANS};letter-spacing:.35em;color:${C.sageMid};margin-top:24px">DAILY REMINDER</div>
   </div>`);
 
 (async () => {
@@ -82,6 +83,6 @@ const quote = page(600, 400, `
   await shot('cover.png', cover, 1500, 600);
   await shot('icon.png', icon, 280, 280);
   for (const [n, ico, bg, num] of TILES) await shot(`tile-${n}.png`, tile(ico, bg, num), 600, 400);
-  await shot('quote.png', quote, 600, 400);
+  await shot('quote.png', quote, 600, 346);
   await browser.close();
 })();
