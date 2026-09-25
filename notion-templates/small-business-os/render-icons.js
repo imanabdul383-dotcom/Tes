@@ -12,6 +12,10 @@ const ICONS = {
   'content-calendar': 'calendar-days', 'seo-keywords': 'search', goals: 'target',
   'shop-metrics': 'chart-column', finances: 'wallet', tasks: 'list-checks',
   'weekly-review': 'notebook-pen',
+  // Sample rows and callouts
+  flame: 'flame', gem: 'gem', frame: 'frame', sprout: 'sprout', notebook: 'notebook',
+  revenue: 'circle-dollar-sign', camera: 'camera', star: 'star', gift: 'gift',
+  sparkles: 'sparkles', calendar: 'calendar', lightbulb: 'lightbulb', heart: 'heart', leaf: 'leaf',
 };
 
 (async () => {
